@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+  <body>
+    <header class="header">
+      <img src="./images/logo.svg" alt="logo_split" class="header__logo">
+    </header>
+  <main class="main">
+      <aside class="calc">
+        <form class="calc__bill">
+          <label for="bill" class="label">Bill</label>
+          <div class="bill__group">
+            <img src="./images/icon-dollar.svg" class="dollar" alt="dolar">
+          <input type="number" min="0.00" step="0.01" name="bill" class="bill" id="bill" placeholder="0.00">
+          </div>
+        </form>
+        <p class="label">Select Tip %</p>
+        <form class="calc__tips">
+          <button class="calc__btn" type="button" value="5">5%</button>
+          <button class="calc__btn" type="button" value="10">10%</button>
+          <button class="calc__btn clicked" type="button" value="15" >15%</button>
+          <button class="calc__btn" type="button" value="25">25%</button>
+          <button class="calc__btn" type="button" value="50">50%</button>
+          <input class="calc__btn calc__btn-custom" type="number" min="0" max="100" placeholder="Custom">
+        </form>
+        <form class="calc__bill">
+          <label for="people" class="label">Number of people</label>
+          <div class="bill__group">
+            <img src="./images/icon-person.svg" class="person" alt="dolar">
+          <input type="number" min="1" step="1" name="bill" class="people-amount" id="people" placeholder="0">
+          </div>
+        </form>
+      </aside>
+      <div class="display">
+        <div class="top">
+          <div class="display__tip">
+            <div class="display__text">
+              <span class="display__text-main">Tip Amount</span>
+              <span class="display__text-sub">/ person</span>
+            </div>
+              <div class="display__tip-amount" id="totalTips">$0.00</div>
+          </div>
+          <div class="display__total">
+            <div class="display__text">
+              <span class="display__text-main">Total</span>
+              <span class="display__text-sub">/ person</span>
+            </div>
+              <div class="display__tip-amount" id="totalTotal">$0.00</div>
+          </div>
+        </div>
+        <div class="bottom">
+          <button class="calculate">Calculate</button>
+        <button class="reset">Reset</button>
+        </div>
+      </div>
+    
+  </main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </br>
+    Coded by <a href="https://github.com/jaronimas-codes">Jaronimas Codes</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

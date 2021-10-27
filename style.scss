@@ -1,0 +1,245 @@
+:root{
+--strong-cyan: hsl(172, 67%, 45%);
+--very-dark-cyan: hsl(183, 100%, 15%);
+--dark-grayish-1: hsl(186, 14%, 43%);
+--dark-grayish-2: hsl(184, 14%, 56%);
+--light-grayish-1: hsl(185, 41%, 84%);
+--light-grayish-2: hsl(189, 41%, 97%);
+--white: hsl(0, 0%, 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 150%;
+  font-family: 'Space Mono', monospace;
+}
+
+body{
+  background: var(--light-grayish-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.component{
+  width: 95vw;
+  max-width: 600px;
+}
+
+.header{
+  margin: 1rem;
+}
+
+.main{
+  border-radius: 20px;
+  background: var(--white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 75%;
+  color: var(--dark-grayish-1);
+}
+
+.calc{
+  margin-bottom: 1rem;
+}
+
+.label{
+  font-weight: 700;
+  display: block;
+  font-size: 90%;
+  margin: .5rem 0;
+}
+
+.calc__tips{
+  margin-bottom: 1rem;
+}
+
+.bill__group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-grayish-2);
+  border-radius: 5px;
+  padding: 0 .5rem;
+}
+
+.bill, .people-amount{
+  width: 100%;
+  background-color: var(--light-grayish-2);
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 150%;
+  font-weight: 700;
+  color: var(--very-dark-cyan);
+  font-family: 'Space Mono', monospace;
+
+  &::placeholder{
+    color: var(--dark-grayish-2);
+    background-color: transparent;
+  }
+}
+
+.calc__tips{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.calc__btn{
+  border: none;
+  background-color: var(--very-dark-cyan);
+  margin: .5rem 0;
+  padding: .4rem .4rem;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 120%;
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  flex: 40%;
+  cursor: pointer;
+
+  &:nth-child(even){
+    margin-left: 1rem;
+  }
+}
+
+.calc__btn-custom{
+  background-color: var(--light-grayish-2);
+  color: var(--very-dark-cyan);
+  padding: 0;
+  text-align: center;
+  outline: none;
+
+  &::placeholder{
+     color: var(--dark-grayish-2);
+    text-align: center;
+    padding: .4rem .4rem;
+
+  }
+}
+
+.clicked{
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.people-amount{
+  color: var(--very-dark-cyan);
+
+  &::placeholder{
+    color: var(--dark-grayish-2);
+  }
+}
+
+
+.display{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-cyan);
+  padding: 1rem;
+  border-radius: 20px;
+
+  &__tip, &__total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &-amount{
+      font-weight: 700;
+    color:  var(--strong-cyan);
+    font-size: 180%;
+    }
+
+  }
+
+  &__text-main{
+    font-weight: 700;
+    color: var(--white);
+    font-size: 90%;
+  }
+  
+  &__text-sub{
+    margin: .3rem 0;
+    display: block;
+    font-size: 70%;
+    color:  var(--strong-cyan);
+  }
+
+  .top, .bottom{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reset, .calculate{
+    border: none;
+  background-color: var(--strong-cyan);
+  margin: .5rem 0;
+  padding: .4rem .4rem;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  font-size: 120%;
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  }
+}
+
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      margin-top: 1rem;
+
+      a { 
+        color: hsl(228, 45%, 44%); 
+      }
+    }
+
+  
+
+@media screen and (min-width: 900px){
+  .main{
+    flex-direction: row;
+  }
+
+  .display, .calc{
+    flex: 1;
+  }
+
+  .calc__btn{
+    flex: 25%;
+
+    &:nth-child(even){
+      margin-left: 0rem;
+    }
+
+    margin-right: 1rem;
+
+    
+  }
+
+  .display{
+    justify-content: space-between;
+  }
+
+  .calc{
+    margin-right: 1rem;
+  }
+
+  .component{
+    width: 95vw;
+    max-width: 1000px;
+  }
+}
